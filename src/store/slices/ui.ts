@@ -1,25 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface UiState {
-  requestAccessModalOpen: boolean;
+  authModalOpen: boolean;
 }
 
 const initialState: UiState = {
-  requestAccessModalOpen: false,
+  authModalOpen: false,
 };
 
 const uiSlice = createSlice({
   name: 'ui',
   initialState,
   reducers: {
-    openRequestAccessModal(state) {
-      state.requestAccessModalOpen = true;
+    openAuthModal(state) {
+      state.authModalOpen = true;
     },
-    closeRequestAccessModal(state) {
-      state.requestAccessModalOpen = false;
+    closeAuthModal(state) {
+      state.authModalOpen = false;
     },
   },
 });
 
-export const { openRequestAccessModal, closeRequestAccessModal } = uiSlice.actions;
+export const { openAuthModal, closeAuthModal } = uiSlice.actions;
 export default uiSlice.reducer;

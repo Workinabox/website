@@ -73,6 +73,20 @@ jobs:
       - run: npm run build
         env:
           VITE_APP_VERSION: ${{ needs.create-release.outputs.version }}
+          # Pre-launch gate: defaults to gated. Set the repo variable VITE_LAUNCHED=true
+          # (and re-tag) to go fully public.
+          VITE_LAUNCHED: ${{ vars.VITE_LAUNCHED }}
+          VITE_PREVIEW_ALLOWLIST: ${{ secrets.VITE_PREVIEW_ALLOWLIST }}
+          # Firebase web config — stored as repo Secrets (kept out of the repo to avoid
+          # secret-scanner flags and match house convention). NOTE: a web API key still
+          # ships in the client bundle regardless, so also restrict it in GCP
+          # (HTTP-referrer allowlist) + Firebase Auth authorized domains.
+          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
 
       - name: Package dist
         shell: bash
@@ -90,6 +104,13 @@ jobs:
           path: |
             wiab-website-v${{ needs.create-release.outputs.version }}-dist.tar.gz
             wiab-website-v${{ needs.create-release.outputs.version }}-dist.sha256
+          if-no-files-found: error
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
           if-no-files-found: error
 
   upload:
@@ -110,3 +131,27 @@ jobs:
           set -euo pipefail
           gh release upload "${{ needs.create-release.outputs.tag }}" assets/* \
             --clobber --repo "$GITHUB_REPOSITORY"
+
+  deploy:
+    name: Deploy to Firebase Hosting (live)
+    needs: [create-release, build]
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-prod
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Deploy to live channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          channelId: live

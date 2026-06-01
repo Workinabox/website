@@ -58,5 +58,24 @@
   "footer": {
     "copyright": "© 2026 Gos & co ApS",
     "tagline": "Virksomheder, i en kasse."
+  },
+  "comingSoon": {
+    "title": "Workinabox — Kommer snart",
+    "headline": "Kommer snart.",
+    "subtitle": "Workinabox er endnu ikke åben for offentligheden. Hvis du har preview-adgang, så log ind og tag et kig.",
+    "previewLink": "Preview-login →"
+  },
+  "auth": {
+    "title": "Log ind",
+    "google": "Fortsæt med Google",
+    "or": "eller",
+    "email": "E-mail",
+    "password": "Adgangskode",
+    "signIn": "Log ind",
+    "signOut": "Log ud",
+    "close": "Luk",
+    "unavailable": "Login er ikke tilgængeligt lige nu.",
+    "errorGoogle": "Google-login mislykkedes. Prøv igen.",
+    "errorEmail": "Forkert e-mail eller adgangskode."
   }
 }

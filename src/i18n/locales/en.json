@@ -58,5 +58,24 @@
   "footer": {
     "copyright": "© 2026 Gos & co ApS",
     "tagline": "Companies, in a box."
+  },
+  "comingSoon": {
+    "title": "Workinabox — Coming soon",
+    "headline": "Coming soon.",
+    "subtitle": "Workinabox isn't open to the public yet. If you have preview access, sign in to take a look.",
+    "previewLink": "Preview sign-in →"
+  },
+  "auth": {
+    "title": "Sign in",
+    "google": "Continue with Google",
+    "or": "or",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "close": "Close",
+    "unavailable": "Sign-in is not available right now.",
+    "errorGoogle": "Google sign-in failed. Please try again.",
+    "errorEmail": "Wrong email or password."
   }
 }

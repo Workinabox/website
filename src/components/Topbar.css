@@ -19,6 +19,21 @@
   gap: 12px;
 }
 
+.web-nav .nav-account {
+  font-size: 13px;
+  color: oklch(0.78 0.01 60);
+  max-width: 22ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .web-nav .nav-account {
+    display: none;
+  }
+}
+
 @media (max-width: 880px) {
   .web-nav .nav-links {
     display: none;

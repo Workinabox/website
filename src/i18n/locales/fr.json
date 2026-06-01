@@ -58,5 +58,24 @@
   "footer": {
     "copyright": "© 2026 Gos & co ApS",
     "tagline": "Des entreprises, dans une boîte."
+  },
+  "comingSoon": {
+    "title": "Workinabox — Bientôt disponible",
+    "headline": "Bientôt disponible.",
+    "subtitle": "Workinabox n'est pas encore ouvert au public. Si vous avez un accès en avant-première, connectez-vous pour y jeter un œil.",
+    "previewLink": "Connexion avant-première →"
+  },
+  "auth": {
+    "title": "Se connecter",
+    "google": "Continuer avec Google",
+    "or": "ou",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "close": "Fermer",
+    "unavailable": "La connexion n'est pas disponible pour le moment.",
+    "errorGoogle": "Échec de la connexion Google. Veuillez réessayer.",
+    "errorEmail": "E-mail ou mot de passe incorrect."
   }
 }
