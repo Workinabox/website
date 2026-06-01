@@ -1,0 +1,17 @@
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: oklch(0.75 0.01 60);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.12s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--paper);
+}

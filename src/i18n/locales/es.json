@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Workinabox — Empresas, en una caja.",
+    "description": "Un sistema agéntico que ejecuta el trabajo — software, operaciones, marketing, ventas. Escribe la especificación. Workinabox ejecuta, informa y te avisa cuando está bloqueado. Se entrega como software, o como una caja física en tu escritorio."
+  },
+  "nav": {
+    "product": "Producto",
+    "theBox": "La caja",
+    "docs": "Docs",
+    "pricing": "Precios",
+    "company": "Empresa"
+  },
+  "actions": {
+    "signIn": "Iniciar sesión",
+    "requestAccess": "Solicitar acceso",
+    "readArchitecture": "Leer la arquitectura →"
+  },
+  "lang": {
+    "en": "English",
+    "da": "Dansk",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "pillTag": "v0.1",
+    "pillText": "Vista previa autoalojada · mayo de 2026",
+    "headlinePre": "Empresas, en una ",
+    "headlineAccent": "caja.",
+    "lede": "Un sistema agéntico que ejecuta el trabajo — software, operaciones, marketing, ventas. Escribe la especificación. Workinabox ejecuta, informa y te avisa cuando está bloqueado. Se entrega como software, o como una caja física en tu escritorio.",
+    "visualLabel": "— La caja",
+    "visualStatus": "en vivo"
+  },
+  "features": [
+    {
+      "n": "— 01",
+      "h": "Guiado por especificación",
+      "p": "Las personas escriben la especificación. Los agentes ejecutan, informan y preguntan cuando se bloquean. Nada ocurre sin una especificación."
+    },
+    {
+      "n": "— 02",
+      "h": "Jerarquías de agentes",
+      "p": "Empujar, tirar, delegar, escalar. El sistema gestiona verticales — ingeniería, operaciones, marketing — bajo un mismo techo."
+    },
+    {
+      "n": "— 03",
+      "h": "Tres puertas de seguridad",
+      "p": "Entrada, recuperación, ejecución — cada paso auditado. Las acciones destructivas requieren aprobación. Siempre."
+    },
+    {
+      "n": "— 04",
+      "h": "Tuyo, en una caja",
+      "p": "Ejecútalo en tu hardware, tus VM, tus contenedores — o pídelo como la caja física. Sin dependencia de la nube."
+    }
+  ],
+  "stub": {
+    "comingSoon": "Próximamente."
+  },
+  "footer": {
+    "copyright": "© 2026 Gos & co ApS",
+    "tagline": "Empresas, en una caja."
+  }
+}

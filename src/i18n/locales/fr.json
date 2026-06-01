@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Workinabox — Des entreprises, dans une boîte.",
+    "description": "Un système agentique qui exécute le travail — logiciel, opérations, marketing, ventes. Rédigez la spécification. Workinabox exécute, rend compte et vous prévient lorsqu'il est bloqué. Livré sous forme de logiciel, ou de boîte physique sur votre bureau."
+  },
+  "nav": {
+    "product": "Produit",
+    "theBox": "La boîte",
+    "docs": "Docs",
+    "pricing": "Tarifs",
+    "company": "Entreprise"
+  },
+  "actions": {
+    "signIn": "Se connecter",
+    "requestAccess": "Demander l'accès",
+    "readArchitecture": "Lire l'architecture →"
+  },
+  "lang": {
+    "en": "English",
+    "da": "Dansk",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "pillTag": "v0.1",
+    "pillText": "Préversion auto-hébergée · mai 2026",
+    "headlinePre": "Des entreprises, dans une ",
+    "headlineAccent": "boîte.",
+    "lede": "Un système agentique qui exécute le travail — logiciel, opérations, marketing, ventes. Rédigez la spécification. Workinabox exécute, rend compte et vous prévient lorsqu'il est bloqué. Livré sous forme de logiciel, ou de boîte physique sur votre bureau.",
+    "visualLabel": "— La boîte",
+    "visualStatus": "en ligne"
+  },
+  "features": [
+    {
+      "n": "— 01",
+      "h": "Piloté par la spec",
+      "p": "Les humains rédigent la spécification. Les agents exécutent, rendent compte et demandent en cas de blocage. Rien ne se passe sans spécification."
+    },
+    {
+      "n": "— 02",
+      "h": "Hiérarchies d'agents",
+      "p": "Pousser, tirer, déléguer, escalader. Le système gère des verticales — ingénierie, opérations, marketing — sous un même toit."
+    },
+    {
+      "n": "— 03",
+      "h": "Trois portes de sécurité",
+      "p": "Entrée, récupération, exécution — chaque étape est auditée. Les actions destructrices exigent une approbation. Toujours."
+    },
+    {
+      "n": "— 04",
+      "h": "À vous, dans une boîte",
+      "p": "Exécutez-le sur votre matériel, vos VM, vos conteneurs — ou commandez-le comme la boîte physique. Aucun verrouillage cloud."
+    }
+  ],
+  "stub": {
+    "comingSoon": "Bientôt disponible."
+  },
+  "footer": {
+    "copyright": "© 2026 Gos & co ApS",
+    "tagline": "Des entreprises, dans une boîte."
+  }
+}

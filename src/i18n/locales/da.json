@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Workinabox — Virksomheder, i en kasse.",
+    "description": "Et agentbaseret system, der udfører arbejdet — software, drift, marketing, salg. Skriv specifikationen. Workinabox udfører, rapporterer og fortæller dig, når den er blokeret. Leveres som software eller som en fysisk kasse på dit skrivebord."
+  },
+  "nav": {
+    "product": "Produkt",
+    "theBox": "Kassen",
+    "docs": "Dokumentation",
+    "pricing": "Priser",
+    "company": "Virksomhed"
+  },
+  "actions": {
+    "signIn": "Log ind",
+    "requestAccess": "Anmod om adgang",
+    "readArchitecture": "Læs arkitekturen →"
+  },
+  "lang": {
+    "en": "English",
+    "da": "Dansk",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "pillTag": "v0.1",
+    "pillText": "Selvhostet preview · maj 2026",
+    "headlinePre": "Virksomheder, i en ",
+    "headlineAccent": "kasse.",
+    "lede": "Et agentbaseret system, der udfører arbejdet — software, drift, marketing, salg. Skriv specifikationen. Workinabox udfører, rapporterer og fortæller dig, når den er blokeret. Leveres som software eller som en fysisk kasse på dit skrivebord.",
+    "visualLabel": "— Kassen",
+    "visualStatus": "live"
+  },
+  "features": [
+    {
+      "n": "— 01",
+      "h": "Specdrevet",
+      "p": "Mennesker skriver specifikationen. Agenter udfører, rapporterer og spørger, når de er blokeret. Intet sker uden en specifikation."
+    },
+    {
+      "n": "— 02",
+      "h": "Hierarkier af agenter",
+      "p": "Skub, træk, delegér, eskalér. Systemet driver vertikaler — udvikling, drift, marketing — under ét tag."
+    },
+    {
+      "n": "— 03",
+      "h": "Tre sikkerhedsporte",
+      "p": "Input, hentning, udførelse — hvert trin revideres. Destruktive handlinger kræver godkendelse. Altid."
+    },
+    {
+      "n": "— 04",
+      "h": "Din egen, i en kasse",
+      "p": "Kør den på din egen hardware, dine VM'er, dine containere — eller bestil den som den fysiske kasse. Ingen cloud-lock-in."
+    }
+  ],
+  "stub": {
+    "comingSoon": "Kommer snart."
+  },
+  "footer": {
+    "copyright": "© 2026 Gos & co ApS",
+    "tagline": "Virksomheder, i en kasse."
+  }
+}

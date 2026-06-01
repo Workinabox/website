@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Workinabox — Companies, in a box.",
+    "description": "An agentic system that runs the work — software, ops, marketing, sales. Write the spec. Workinabox executes, reports, and tells you when it's blocked. Ships as software, or as a physical box on your desk."
+  },
+  "nav": {
+    "product": "Product",
+    "theBox": "The box",
+    "docs": "Docs",
+    "pricing": "Pricing",
+    "company": "Company"
+  },
+  "actions": {
+    "signIn": "Sign in",
+    "requestAccess": "Request access",
+    "readArchitecture": "Read the architecture →"
+  },
+  "lang": {
+    "en": "English",
+    "da": "Dansk",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "pillTag": "v0.1",
+    "pillText": "Self-hosted preview · May 2026",
+    "headlinePre": "Companies, in a ",
+    "headlineAccent": "box.",
+    "lede": "An agentic system that runs the work — software, ops, marketing, sales. Write the spec. Workinabox executes, reports, and tells you when it's blocked. Ships as software, or as a physical box on your desk.",
+    "visualLabel": "— The box",
+    "visualStatus": "live"
+  },
+  "features": [
+    {
+      "n": "— 01",
+      "h": "Spec-driven",
+      "p": "Humans write the spec. Agents execute, report, and ask when blocked. Nothing happens without a spec."
+    },
+    {
+      "n": "— 02",
+      "h": "Hierarchies of agents",
+      "p": "Push, pull, delegate, escalate. The system runs verticals — engineering, ops, marketing — under one roof."
+    },
+    {
+      "n": "— 03",
+      "h": "Three security gates",
+      "p": "Input, retrieval, execution — every step audited. Destructive actions require approval. Always."
+    },
+    {
+      "n": "— 04",
+      "h": "Yours, on a box",
+      "p": "Run it on your hardware, your VMs, your containers — or order it as the literal box. No cloud lock-in."
+    }
+  ],
+  "stub": {
+    "comingSoon": "Coming soon."
+  },
+  "footer": {
+    "copyright": "© 2026 Gos & co ApS",
+    "tagline": "Companies, in a box."
+  }
+}

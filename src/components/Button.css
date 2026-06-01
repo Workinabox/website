@@ -1,0 +1,41 @@
+.btn {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: var(--r-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+  transition: all 0.12s ease;
+}
+
+.btn.primary {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange-deep);
+}
+
+.btn.primary:hover {
+  background: var(--orange-deep);
+}
+
+/* Ghost buttons live on the dark ink site surface (see .web-hero / .web-nav overrides). */
+.btn.ghost {
+  background: transparent;
+  color: var(--paper);
+  border-color: var(--ink-soft);
+}
+
+.btn.ghost:hover {
+  background: var(--ink-soft);
+}
+
+.btn.small {
+  padding: 6px 12px;
+  font-size: 13px;
+}

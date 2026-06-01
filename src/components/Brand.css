@@ -1,0 +1,17 @@
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-lockup .lwm {
+  font-family: var(--font-mark);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+}
+
+.brand-lockup .lwm .a {
+  color: var(--orange);
+}

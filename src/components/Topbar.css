@@ -1,0 +1,26 @@
+.web-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 36px;
+  border-bottom: 1px solid var(--ink-soft);
+}
+
+.web-nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.web-nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 880px) {
+  .web-nav .nav-links {
+    display: none;
+  }
+}
