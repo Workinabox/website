@@ -7,7 +7,10 @@ const Footer = () => {
   return (
     <footer className="web-footer">
       <span className="footer-tag">{t('footer.tagline')}</span>
-      <span className="footer-copy">{t('footer.copyright')}</span>
+      <div className="footer-right">
+        <span className="footer-version">v{__APP_VERSION__}</span>
+        <span className="footer-copy">{t('footer.copyright')}</span>
+      </div>
     </footer>
   );
 };

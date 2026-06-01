@@ -16,3 +16,13 @@
 .web-footer .footer-tag {
   color: oklch(0.75 0.01 60);
 }
+
+.web-footer .footer-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.web-footer .footer-version {
+  color: var(--orange);
+}
