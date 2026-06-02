@@ -70,6 +70,10 @@ web_modules/
 .env.*
 !.env.example
 
+# Firebase project binding (project id is non-secret but kept out of the repo for
+# consistency — CI uses the FIREBASE_PROJECT_ID variable; locally run `firebase use`).
+.firebaserc
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache

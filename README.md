@@ -59,7 +59,8 @@ email allowlist can sign in and preview the real site on the same domain.
    key isn't a true secret — it ships in the client bundle — but we keep it in Secrets to
    stay out of the repo, avoid secret-scanner flags, and mask it in CI logs. The real
    protection is GCP key restrictions + Auth authorized domains, see below.)
-3. Set [.firebaserc](.firebaserc) `projects.default` to your project id (or `firebase use`).
+3. (Local deploys only) run `firebase use <project-id>` — this writes a gitignored
+   `.firebaserc`. CI doesn't need it; the deploy uses the `FIREBASE_PROJECT_ID` variable.
 4. Generate a CI service account: **Project settings → Service accounts → Generate new
    private key**; store the JSON as the GitHub **secret** `FIREBASE_SERVICE_ACCOUNT`, and
    set the GitHub **variable** `FIREBASE_PROJECT_ID` (project id is not secret; the deploy
