@@ -77,5 +77,10 @@
     "unavailable": "La connexion n'est pas disponible pour le moment.",
     "errorGoogle": "Échec de la connexion Google. Veuillez réessayer.",
     "errorEmail": "E-mail ou mot de passe incorrect."
+  },
+  "cookies": {
+    "message": "Nous utilisons Google Analytics pour comprendre comment les visiteurs utilisent ce site.",
+    "accept": "Accepter",
+    "reject": "Refuser"
   }
 }

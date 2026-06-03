@@ -8,6 +8,8 @@ import { store } from './store';
 import AuthListener from './auth/AuthListener';
 import LaunchGate from './components/LaunchGate';
 import AuthModal from './components/AuthModal';
+import AnalyticsListener from './components/AnalyticsListener';
+import CookieBanner from './components/CookieBanner';
 import './config/firebase';
 import './i18n';
 import './styles/tokens.css';
@@ -19,10 +21,12 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <AuthListener />
+        <AnalyticsListener />
         <LaunchGate>
           <App />
         </LaunchGate>
         <AuthModal />
+        <CookieBanner />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

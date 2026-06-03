@@ -77,5 +77,10 @@
     "unavailable": "Sign-in is not available right now.",
     "errorGoogle": "Google sign-in failed. Please try again.",
     "errorEmail": "Wrong email or password."
+  },
+  "cookies": {
+    "message": "We use Google Analytics to understand how visitors use this site.",
+    "accept": "Accept",
+    "reject": "Reject"
   }
 }

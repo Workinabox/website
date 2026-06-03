@@ -77,5 +77,10 @@
     "unavailable": "Login er ikke tilgængeligt lige nu.",
     "errorGoogle": "Google-login mislykkedes. Prøv igen.",
     "errorEmail": "Forkert e-mail eller adgangskode."
+  },
+  "cookies": {
+    "message": "Vi bruger Google Analytics til at forstå, hvordan besøgende bruger dette website.",
+    "accept": "Accepter",
+    "reject": "Afvis"
   }
 }
