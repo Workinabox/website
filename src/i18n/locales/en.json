@@ -76,7 +76,10 @@
     "close": "Close",
     "unavailable": "Sign-in is not available right now.",
     "errorGoogle": "Google sign-in failed. Please try again.",
-    "errorEmail": "Wrong email or password."
+    "errorEmail": "Wrong email or password.",
+    "errorProviderDisabled": "Email sign-in isn't enabled for this project. Enable Email/Password in the Firebase console.",
+    "errorNoAccount": "No account found for this email.",
+    "errorTooMany": "Too many attempts. Please wait a moment and try again."
   },
   "cookies": {
     "message": "We use Google Analytics to understand how visitors use this site.",

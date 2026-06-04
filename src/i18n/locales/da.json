@@ -76,7 +76,10 @@
     "close": "Luk",
     "unavailable": "Login er ikke tilgængeligt lige nu.",
     "errorGoogle": "Google-login mislykkedes. Prøv igen.",
-    "errorEmail": "Forkert e-mail eller adgangskode."
+    "errorEmail": "Forkert e-mail eller adgangskode.",
+    "errorProviderDisabled": "E-mail-login er ikke aktiveret for dette projekt. Aktivér Email/Password i Firebase-konsollen.",
+    "errorNoAccount": "Der blev ikke fundet nogen konto for denne e-mail.",
+    "errorTooMany": "For mange forsøg. Vent et øjeblik, og prøv igen."
   },
   "cookies": {
     "message": "Vi bruger Google Analytics til at forstå, hvordan besøgende bruger dette website.",

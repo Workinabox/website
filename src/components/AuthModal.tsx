@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithPopup, signInWithEmailAndPassword, AuthErrorCodes } from 'firebase/auth';
 
 import { auth, googleProvider } from '../config/firebase';
 import { useAppDispatch, useAppSelector } from '../store';
@@ -50,6 +50,29 @@ const AuthModal = () => {
     return true;
   };
 
+  // Surface the real Firebase reason instead of a blanket "wrong password".
+  // Most "I'm sure my password is right" cases are actually one of:
+  //  - provider disabled in the console, or
+  //  - the account only has a Google credential (no password set).
+  const describeAuthError = (err: unknown): string => {
+    const code = (err as { code?: string })?.code ?? '';
+    // eslint-disable-next-line no-console
+    console.error('[auth] sign-in failed:', code || err, err);
+    switch (code) {
+      case AuthErrorCodes.OPERATION_NOT_ALLOWED: // 'auth/operation-not-allowed'
+        return t('auth.errorProviderDisabled');
+      case AuthErrorCodes.USER_DELETED: // 'auth/user-not-found'
+        return t('auth.errorNoAccount');
+      case AuthErrorCodes.INVALID_PASSWORD: // 'auth/wrong-password'
+      case 'auth/invalid-credential': // modern merged code (wrong password OR Google-only account)
+        return t('auth.errorEmail');
+      case AuthErrorCodes.TOO_MANY_ATTEMPTS_TRY_LATER: // 'auth/too-many-requests'
+        return t('auth.errorTooMany');
+      default:
+        return `${t('auth.errorEmail')} (${code || 'unknown'})`;
+    }
+  };
+
   const handleGoogle = async () => {
     if (!guard() || !auth) return;
     setBusy(true);
@@ -57,7 +80,9 @@ const AuthModal = () => {
     try {
       await signInWithPopup(auth, googleProvider);
       close();
-    } catch {
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('[auth] Google sign-in failed:', (err as { code?: string })?.code, err);
       setError(t('auth.errorGoogle'));
     } finally {
       setBusy(false);
@@ -72,8 +97,8 @@ const AuthModal = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       close();
-    } catch {
-      setError(t('auth.errorEmail'));
+    } catch (err) {
+      setError(describeAuthError(err));
     } finally {
       setBusy(false);
     }

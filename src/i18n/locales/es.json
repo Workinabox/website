@@ -76,7 +76,10 @@
     "close": "Cerrar",
     "unavailable": "El inicio de sesión no está disponible en este momento.",
     "errorGoogle": "Error al iniciar sesión con Google. Inténtalo de nuevo.",
-    "errorEmail": "Correo o contraseña incorrectos."
+    "errorEmail": "Correo o contraseña incorrectos.",
+    "errorProviderDisabled": "El inicio de sesión por correo no está habilitado en este proyecto. Actívalo en la consola de Firebase.",
+    "errorNoAccount": "No se encontró ninguna cuenta para este correo.",
+    "errorTooMany": "Demasiados intentos. Espera un momento e inténtalo de nuevo."
   },
   "cookies": {
     "message": "Usamos Google Analytics para entender cómo los visitantes utilizan este sitio.",

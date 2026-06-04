@@ -76,7 +76,10 @@
     "close": "Fermer",
     "unavailable": "La connexion n'est pas disponible pour le moment.",
     "errorGoogle": "Échec de la connexion Google. Veuillez réessayer.",
-    "errorEmail": "E-mail ou mot de passe incorrect."
+    "errorEmail": "E-mail ou mot de passe incorrect.",
+    "errorProviderDisabled": "La connexion par e-mail n'est pas activée pour ce projet. Activez Email/Password dans la console Firebase.",
+    "errorNoAccount": "Aucun compte trouvé pour cet e-mail.",
+    "errorTooMany": "Trop de tentatives. Veuillez patienter un instant et réessayer."
   },
   "cookies": {
     "message": "Nous utilisons Google Analytics pour comprendre comment les visiteurs utilisent ce site.",
