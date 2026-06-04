@@ -73,6 +73,10 @@ jobs:
       - run: npm run build
         env:
           VITE_APP_VERSION: ${{ needs.create-release.outputs.version }}
+          # GA4 measurement ID (G-XXXXXXXXXX). Not sensitive — it ships in the client
+          # bundle — so it lives as a repo Variable, not a Secret. Leave the variable
+          # unset to disable analytics (build no-ops). Consent-gated at runtime.
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
           # Pre-launch gate: defaults to gated. Set the repo variable VITE_LAUNCHED=true
           # (and re-tag) to go fully public.
           VITE_LAUNCHED: ${{ vars.VITE_LAUNCHED }}
