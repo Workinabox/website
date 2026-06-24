@@ -10,7 +10,9 @@
 export const LAUNCHED = import.meta.env.VITE_LAUNCHED === 'true';
 
 /** Emails allowed to preview the real site while LAUNCHED is false. */
-export const previewAllowlist: string[] = (import.meta.env.VITE_PREVIEW_ALLOWLIST ?? '')
+export const previewAllowlist: string[] = (
+  import.meta.env.VITE_PREVIEW_ALLOWLIST ?? ''
+)
   .split(',')
   .map((email) => email.trim().toLowerCase())
   .filter(Boolean);

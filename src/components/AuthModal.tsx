@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { signInWithPopup, signInWithEmailAndPassword, AuthErrorCodes } from 'firebase/auth';
+import {
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  AuthErrorCodes,
+} from 'firebase/auth';
 
 import { auth, googleProvider } from '../config/firebase';
 import { useAppDispatch, useAppSelector } from '../store';
@@ -56,7 +60,6 @@ const AuthModal = () => {
   //  - the account only has a Google credential (no password set).
   const describeAuthError = (err: unknown): string => {
     const code = (err as { code?: string })?.code ?? '';
-    // eslint-disable-next-line no-console
     console.error('[auth] sign-in failed:', code || err, err);
     switch (code) {
       case AuthErrorCodes.OPERATION_NOT_ALLOWED: // 'auth/operation-not-allowed'
@@ -81,8 +84,11 @@ const AuthModal = () => {
       await signInWithPopup(auth, googleProvider);
       close();
     } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error('[auth] Google sign-in failed:', (err as { code?: string })?.code, err);
+      console.error(
+        '[auth] Google sign-in failed:',
+        (err as { code?: string })?.code,
+        err,
+      );
       setError(t('auth.errorGoogle'));
     } finally {
       setBusy(false);
@@ -105,14 +111,29 @@ const AuthModal = () => {
   };
 
   return (
-    <div className="auth-overlay" role="dialog" aria-modal="true" onMouseDown={close}>
+    <div
+      className="auth-overlay"
+      role="dialog"
+      aria-modal="true"
+      onMouseDown={close}
+    >
       <div className="auth-modal" onMouseDown={(e) => e.stopPropagation()}>
-        <button className="auth-close" type="button" aria-label={t('auth.close')} onClick={close}>
+        <button
+          className="auth-close"
+          type="button"
+          aria-label={t('auth.close')}
+          onClick={close}
+        >
           ×
         </button>
         <h2 className="auth-title">{t('auth.title')}</h2>
 
-        <Button variant="ghost" className="auth-google" onClick={handleGoogle} disabled={busy}>
+        <Button
+          variant="ghost"
+          className="auth-google"
+          onClick={handleGoogle}
+          disabled={busy}
+        >
           {t('auth.google')}
         </Button>
 

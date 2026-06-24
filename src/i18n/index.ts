@@ -10,7 +10,9 @@ import es from './locales/es.json';
 export const SUPPORTED_LANGUAGES = ['en', 'da', 'fr', 'es'] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
-export const isSupportedLanguage = (value: string): value is SupportedLanguage =>
+export const isSupportedLanguage = (
+  value: string,
+): value is SupportedLanguage =>
   (SUPPORTED_LANGUAGES as readonly string[]).includes(value);
 
 void i18n

@@ -22,9 +22,13 @@ const AuthListener = () => {
       dispatch(
         setUser(
           fbUser
-            ? { uid: fbUser.uid, email: fbUser.email, displayName: fbUser.displayName }
-            : null
-        )
+            ? {
+                uid: fbUser.uid,
+                email: fbUser.email,
+                displayName: fbUser.displayName,
+              }
+            : null,
+        ),
       );
     });
   }, [dispatch]);

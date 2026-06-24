@@ -12,7 +12,8 @@ const Hero = () => {
       <div className="web-hero-inner">
         <div className="hero-copy">
           <span className="pill">
-            <span className="tag">{t('hero.pillTag')}</span> {t('hero.pillText')}
+            <span className="tag">{t('hero.pillTag')}</span>{' '}
+            {t('hero.pillText')}
           </span>
           <h1>
             {t('hero.headlinePre')}

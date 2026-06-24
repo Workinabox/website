@@ -2,7 +2,11 @@ import { useEffect, useRef, useState, type ReactElement } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { SUPPORTED_LANGUAGES, isSupportedLanguage, type SupportedLanguage } from '../i18n';
+import {
+  SUPPORTED_LANGUAGES,
+  isSupportedLanguage,
+  type SupportedLanguage,
+} from '../i18n';
 import './LangSwitch.css';
 
 const FlagDanish = () => (
@@ -55,19 +59,26 @@ const LangSwitch = () => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   const resolved = i18n.resolvedLanguage ?? i18n.language;
-  const current: SupportedLanguage = isSupportedLanguage(resolved) ? resolved : 'en';
+  const current: SupportedLanguage = isSupportedLanguage(resolved)
+    ? resolved
+    : 'en';
   const CurrentFlag = FLAGS[current];
 
   const switchTo = (lang: SupportedLanguage) => {
     if (lang === current) return;
     const rest = location.pathname.replace(/^\/[a-z]{2}(\/|$)/, '/');
-    navigate(`/${lang}${rest === '/' ? '/' : rest}${location.search}${location.hash}`);
+    navigate(
+      `/${lang}${rest === '/' ? '/' : rest}${location.search}${location.hash}`,
+    );
   };
 
   useEffect(() => {
     if (!open) return;
     const onMouseDown = (e: MouseEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(e.target as Node)
+      ) {
         setOpen(false);
       }
     };

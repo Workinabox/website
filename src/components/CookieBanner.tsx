@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { getConsent, setConsent, loadGA, trackPageView } from '../analytics/analytics';
+import {
+  getConsent,
+  setConsent,
+  loadGA,
+  trackPageView,
+} from '../analytics/analytics';
 import './CookieBanner.css';
 
 const CookieBanner = () => {
