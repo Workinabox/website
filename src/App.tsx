@@ -23,7 +23,12 @@ const LangGate = () => {
   }, [isValid, lang, i18n]);
 
   if (!isValid) {
-    return <Navigate to={`/${i18n.resolvedLanguage ?? i18n.language ?? 'en'}/`} replace />;
+    return (
+      <Navigate
+        to={`/${i18n.resolvedLanguage ?? i18n.language ?? 'en'}/`}
+        replace
+      />
+    );
   }
 
   return (
@@ -41,7 +46,12 @@ const LangGate = () => {
 
 const RootRedirect = () => {
   const { i18n } = useTranslation();
-  return <Navigate to={`/${i18n.resolvedLanguage ?? i18n.language ?? 'en'}/`} replace />;
+  return (
+    <Navigate
+      to={`/${i18n.resolvedLanguage ?? i18n.language ?? 'en'}/`}
+      replace
+    />
+  );
 };
 
 const App = () => (

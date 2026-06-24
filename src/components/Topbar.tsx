@@ -29,13 +29,19 @@ const Topbar = () => {
         <LangSwitch />
         {user ? (
           <>
-            <span className="nav-account">{user.displayName ?? user.email}</span>
+            <span className="nav-account">
+              {user.displayName ?? user.email}
+            </span>
             <Button variant="ghost" small onClick={handleSignOut}>
               {t('auth.signOut')}
             </Button>
           </>
         ) : (
-          <Button variant="ghost" small onClick={() => dispatch(openAuthModal())}>
+          <Button
+            variant="ghost"
+            small
+            onClick={() => dispatch(openAuthModal())}
+          >
             {t('actions.signIn')}
           </Button>
         )}

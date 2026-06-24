@@ -29,5 +29,5 @@ root.render(
         <CookieBanner />
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
